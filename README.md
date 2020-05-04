@@ -25,7 +25,7 @@ You can create demo server using docker.
 
 ```
 docker build -t hiroakis/tornade-websocket-example .
-docker run -d -p 8888:8888 hiroakis/tornade-websocket-example
+docker run -it -p 8888:8888 hiroakis/tornade-websocket-example
 ```
 
 or
