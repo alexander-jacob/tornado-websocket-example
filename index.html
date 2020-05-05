@@ -81,11 +81,12 @@
       <li>value 201 - 500 : change to yellow</li>
       <li>value 501 - : change to red</li>
     </ul>
-    <img src="./rest_api_example.png"/>
+    <img src="/rest_api_example.png"/>
   </div>
   <script>
     var host = window.location.host;
-    var ws = new WebSocket('wss://'+host+'/ws');
+    var proto = location.protocol === 'https:' ? 'wss:' : 'ws:';
+    var ws = new WebSocket(proto+'//'+host+'/ws');
     var $message = $('#message');
 
     ws.onopen = function(){
