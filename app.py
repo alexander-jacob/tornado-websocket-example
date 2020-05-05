@@ -41,7 +41,7 @@ app = web.Application([
     (r'/api', ApiHandler),
     (r'/(favicon.ico)', web.StaticFileHandler, {'path': '../'}),
     (r'/(rest_api_example.png)', web.StaticFileHandler, {'path': './'}),
-])
+], debug=True)
 
 if __name__ == '__main__':
     app.listen(8888)
